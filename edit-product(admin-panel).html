@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактирование пользователя</title>
+    <meta charset="utf-8" />
+    <style>.field{width:180px;}</style>
+</head>
+<style>
+   
+</style>
+<body>
+    <h1>Редактирование товара</h1>
+
+     <a href="/">НАЗАД</a><br><br>
+
+     <form action="/edit" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{{orderlist.id}}" />
+        <label>Имя</label><br>
+        <input name="name" value="{{orderlist.name}}"  class="field" /><br><br>
+        <label>Описание</label><br>
+        <input name="description" value="{{orderlist.description}}"  class="field" /><br><br>
+
+        <label>Цена</label><br>
+        <input name="price" type="number"  value="{{orderlist.price}}"  class="field" /><br><br>
+        <!-- {{!-- Как в ВК. Спроси для чего --}} -->
+        <label>Старая Цена</label><br>
+        <input name="price" type="number"  value="{{orderlist.price}}"  class="field" /><br><br>
+
+        <label>Скрыть товар</label>
+        <input mame='hidegoods' type="checkbox"><br><br>
+        <hr>
+        
+        <label>Заставка товара</label><br>
+        <input type="file" name="filedata" accept=".jpg,.jpeg,.png,.gif" placeholder="Цена товара р." min="0" max="10000000"
+                    step="0.01" /><br><br>
+
+        <input type="submit" value="Изменить" />
+     </form><br>
+</body>
+<html>
